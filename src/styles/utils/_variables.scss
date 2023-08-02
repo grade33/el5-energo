@@ -1,0 +1,17 @@
+// Min Width
+$min-xxl: 1440px;
+$min-xl: 1200px;
+$min-lg: 992px;
+$min-md: 768px;
+$min-sm: 576px;
+$min: 360px;
+
+// Max Width
+$xxl: $min-xxl - 0.02px;
+$xl: $min-xl - 0.02px;
+$lg: $min-lg - 0.02px;
+$md: $min-md - 0.02px;
+$sm: $min-sm - 0.02px;
+
+// Grid gutter
+$gutter: 30px;

@@ -1,0 +1,36 @@
+@use '../../utils/mixins' as mix;
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as fn;
+
+.inclusion {
+  margin-bottom: fn.cmax(100, 208);
+
+  &__content {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    transition: color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--career-red);
+    }
+
+    @media (max-width: vars.$md) {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    @media (max-width: vars.$xxl) {
+      order: 2;
+    }
+  }
+
+  &__title {
+    margin-top: 40px;
+    @media (max-width: vars.$xxl) {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'Промо';
+  - const pageName = 'promo-main-page';
+
+block content
+  include ../components/promo/main/about
+  include ../components/promo/main/chapters
+
+  +about
+  +chapters
+

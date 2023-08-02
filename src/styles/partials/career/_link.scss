@@ -1,0 +1,15 @@
+.link {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  width: fit-content;
+  color: var(--career-red-light);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.35;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+}

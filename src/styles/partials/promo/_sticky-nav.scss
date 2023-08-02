@@ -1,0 +1,100 @@
+@use '../../utils/mixins' as mix;
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as fn;
+@use '../../components/font-style' as font;
+
+.sticky-nav {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  width: 100%;
+  background: var(--white, #fff);
+  @media (max-width: 1024px) {
+    top: 68px;
+  }
+  @media (max-width: vars.$lg) {
+    flex-direction: column;
+  }
+
+  & > * {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    @media (min-width: vars.$min-lg) {
+      padding: 15px 0;
+    }
+    @media (max-width: vars.$lg) {
+      flex-grow: 1;
+      height: 70px;
+      text-align: center;
+    }
+  }
+
+  &__back,
+  &__next {
+    display: flex;
+    align-items: center;
+    @include font.t3;
+
+    @media (min-width: vars.$min-lg) {
+      width: 34.83%;
+
+      span {
+        max-width: 157px;
+      }
+    }
+
+    @media (max-width: vars.$md) {
+      @include font.h6-mobile;
+    }
+
+    &-icon {
+      width: 85px;
+      height: 11px;
+    }
+  }
+
+  &__back {
+    gap: 36px;
+    color: var(--red, #d2233c);
+    @media (max-width: vars.$lg) {
+      display: none;
+    }
+  }
+
+  &__title {
+    @include font.t1;
+
+    @media (min-width: vars.$min-lg) {
+      width: 30.34%;
+    }
+
+    @media (max-width: vars.$md) {
+      @include font.h6-mobile;
+    }
+  }
+
+  &__next {
+    gap: 20px;
+    color: var(--white, #fff);
+
+    @media (max-width: vars.$lg) {
+      height: 70px;
+    }
+
+    &_sdpp {
+      background: var(--ligt-green, #8ed760);
+    }
+
+    &_wcc {
+      background: var(--ligt-blue, #4da4ff);
+    }
+
+    &-icon {
+      transform: rotate(180deg);
+    }
+  }
+}

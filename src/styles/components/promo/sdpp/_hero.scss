@@ -1,0 +1,314 @@
+@use '../../../utils/mixins' as mix;
+@use '../../../utils/variables' as vars;
+@use '../../../utils/functions' as fn;
+@use '../../font-style' as font;
+
+.hero {
+  position: relative;
+  z-index: 1;
+  margin-top: 83px;
+  margin-bottom: fn.cmin(30, 100);
+  @media (max-width: vars.$sm) {
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: vars.$lg) {
+    margin-top: 140px;
+    padding-bottom: 20px;
+  }
+
+  &__bg {
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__modal {
+    position: absolute;
+    top: 19%;
+    z-index: 3;
+    max-width: 86.15%;
+    @include font.t3;
+
+    @media (max-width: vars.$md) {
+      @include font.t2-mobile;
+    }
+
+    &::before {
+      position: absolute;
+      top: -7px;
+      left: -7px;
+      z-index: -3;
+      width: 100%;
+      height: 100%;
+      border: 1px solid #525252;
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      background: rgba(193, 193, 193, 80%);
+      content: '';
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 57px;
+      padding-top: 78px;
+      background: var(--white, #fff);
+
+      @media (max-width: vars.$md) {
+        padding: 30px;
+        padding-top: 40px;
+      }
+    }
+
+    &-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 35px;
+      color: #000;
+
+      svg {
+        width: 27px;
+        height: 27px;
+      }
+
+      @media (max-width: vars.$md) {
+        padding: 13px;
+
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    &_info {
+      top: 2%;
+      left: 50%;
+      width: 1015px;
+      transform: translateX(-50%);
+
+      @media (max-width: vars.$lg) {
+        top: 18.5%;
+        transform: translate(-50%, -50%);
+
+        img {
+          display: none;
+        }
+      }
+
+      .hero__modal-content {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        align-items: center;
+        justify-content: center;
+        padding: 41px 57px 57px 41px;
+
+        @media (max-width: vars.$md) {
+          padding: 21px;
+          padding-top: 28px;
+        }
+      }
+    }
+
+    &_wcc {
+      left: 7.39%;
+      width: 506px;
+      @media (max-width: vars.$lg) {
+        top: 5%;
+      }
+    }
+
+    &_sdpp {
+      right: 7.39%;
+      width: 526px;
+      @media (max-width: vars.$lg) {
+        top: 16%;
+      }
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 23%;
+    z-index: 3;
+    padding: 15px 67px;
+    color: var(--red, #d2233c);
+    background: #efefef;
+    border: 1px solid var(--red, #d2233c);
+    border-radius: 52px;
+    @include font.t3;
+
+    @media (max-width: vars.$xl) and (min-width: vars.$min-lg) {
+      top: 26%;
+    }
+
+    @media (max-width: vars.$md) {
+      padding: 12px 53px;
+      @include font.t2-mobile;
+    }
+
+    &_water {
+      left: 7.39%;
+      @media (max-width: vars.$lg) {
+        top: 5%;
+        left: 13%;
+      }
+    }
+
+    &_gas {
+      right: 7.39%;
+      @media (max-width: vars.$lg) {
+        top: 30%;
+        right: 11%;
+      }
+    }
+  }
+
+  &__title {
+    &-block {
+      display: flex;
+      background: var(--white, #fff);
+      @include font.h4;
+
+      @media (max-width: vars.$md) {
+        @include font.h3-mobile;
+      }
+
+      @media (min-width: vars.$min-lg) {
+        position: absolute;
+        right: 0;
+        left: 0;
+        z-index: -1;
+        align-items: center;
+        height: 18%;
+      }
+
+      @media (max-width: vars.$xl) and (min-width: vars.$min-lg) {
+        @include font.t1;
+      }
+
+      @media (min-width: vars.$min-lg) {
+        &_boiler {
+          top: 41%;
+          justify-content: flex-end;
+        }
+
+        &_turbine {
+          top: 80%;
+        }
+      }
+
+      @media (max-width: vars.$lg) {
+        align-items: flex-end;
+        min-height: 215px;
+        margin-top: -120px;
+        padding-bottom: 20px;
+
+        &_boiler {
+          margin-bottom: 38px;
+        }
+
+        &_turbine {
+          justify-content: flex-end;
+        }
+      }
+    }
+
+    @media (min-width: vars.$min-lg) {
+      margin: 0 5%;
+    }
+    @media (max-width: vars.$lg) {
+      padding: 0 22px;
+    }
+  }
+
+  &__turbine-text {
+    @include font.t3;
+
+    position: absolute;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+
+    @media (max-width: vars.$md) {
+      @include font.t3-mobile;
+    }
+
+    @media (min-width: vars.$min-lg) {
+      &_1 {
+        top: 83.5%;
+        left: 31.5%;
+      }
+
+      &_2 {
+        top: 97.5%;
+        left: 46%;
+      }
+
+      &_3 {
+        top: 93%;
+        left: 88%;
+      }
+    }
+    @media (max-width: vars.$lg) {
+      &:not(&_mobile) {
+        display: none;
+      }
+
+      &_1 {
+        top: 17%;
+        left: 17.5%;
+      }
+
+      &_2 {
+        top: 6%;
+        left: 79%;
+      }
+
+      &_3 {
+        top: 66.5%;
+        left: 79%;
+      }
+    }
+  }
+
+  &__mobile {
+    @media (min-width: vars.$min-lg) {
+      display: none;
+    }
+  }
+
+  &__turbine-desc {
+    display: block;
+    @include font.t3;
+
+    margin-bottom: 27px;
+    @media (max-width: vars.$lg) {
+      padding: 0 22px;
+    }
+    @media (max-width: vars.$md) {
+      @include font.t2-mobile;
+    }
+  }
+
+  &__turbine-bg {
+    &-block {
+      position: relative;
+    }
+
+    width: 100%;
+  }
+}

@@ -1,0 +1,18 @@
+mixin sticky-nav(type)
+  .sticky-nav
+    a.sticky-nav__back(href="./promo-main.html") 
+      svg.sticky-nav__back-icon
+        use(xlink:href="./assets/sprite.svg#promo--long-back-arrow")
+      span Назад
+    if type === 'sdpp'
+      h1.sticky-nav__title Работа ГРЭС
+      a.sticky-nav__next.sticky-nav__next_sdpp(href="./promo-wcc.html") 
+        span Узнать, как работает ВЭС
+        svg.sticky-nav__next-icon
+          use(xlink:href="./assets/sprite.svg#promo--long-back-arrow")
+    else if type === 'wcc'
+      h1.sticky-nav__title Работа ВЭС
+      a.sticky-nav__next.sticky-nav__next_wcc(href="./promo-sdpp.html") 
+        span Узнать, как работает ГРЭС
+        svg.sticky-nav__next-icon
+          use(xlink:href="./assets/sprite.svg#promo--long-back-arrow")

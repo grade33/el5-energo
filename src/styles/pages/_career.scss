@@ -1,0 +1,26 @@
+.main.career-page {
+  // Styles
+  @import '../vendor/style';
+
+  //  Base
+  @import '../base/reset';
+  @import '../base/grid';
+
+  // Vendor
+  @import '../vendor/select';
+
+  // Partials
+  @import '../partials/career/lang';
+  @import '../partials/career/link';
+
+  // Components
+  @import '../components/career/base';
+  @import '../components/career/hero';
+  @import '../components/career/desc';
+  @import '../components/career/benefits';
+  @import '../components/career/offer';
+  @import '../components/career/internship';
+  @import '../components/career/mentoring';
+  @import '../components/career/dynasties';
+  @import '../components/career/inclusion';
+}

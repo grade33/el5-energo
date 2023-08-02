@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-scss",
+    "stylelint-config-rational-order",
+    "stylelint-config-prettier-scss",
+    "stylelint-prettier"
+  ],
+  "ignoreFiles": ["**/*", "!src/**/*", "template.scss", "page.scss"],
+  "rules": {
+    "string-quotes": "single",
+    "media-feature-range-notation": null,
+    "media-query-no-invalid": null,
+    "no-invalid-position-at-import-rule": null,
+    "no-descending-specificity": null,
+    "scss/no-global-function-names": null,
+    "selector-class-pattern": null,
+    "color-function-notation": null
+  }
+}

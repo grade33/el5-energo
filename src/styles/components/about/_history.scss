@@ -1,0 +1,40 @@
+@use '../../utils/mixins' as mix;
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as fn;
+
+  .history {
+    &__container {
+      padding-top: fn.cmax(60, 155);
+      padding-bottom: fn.cmax(40, 96);
+    }
+
+    &__title {
+      margin-bottom: fn.cmax(16, 56);
+
+      @media (max-width: vars.$md) {
+        margin-bottom: 20px;
+      }
+    }
+
+    &__desc-block {
+      display: flex;
+      flex-direction: column;
+      gap: fn.cmax(12, 20);
+      margin-bottom: fn.cmax(24, 40);
+    }
+
+    &__list {
+      row-gap: 32px;
+      justify-content: space-between;
+    }
+
+    &__item-order {
+      @media (max-width: vars.$lg) {
+        order: 3;
+      }
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }

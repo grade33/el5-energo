@@ -1,0 +1,79 @@
+@use '../../utils/mixins' as mix;
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as fn;
+
+& {
+  // Colors
+  --career-white: #fff;
+  --career-black: #222;
+  --career-red: #d3175a;
+  --career-red-light: #d3135a;
+
+  // Container
+  --container: 1240px;
+  --padding: 15px;
+
+  @media (max-width: vars.$xxl) {
+    --container: 1140px;
+  }
+
+  @media (max-width: vars.$xl) {
+    --container: 950px;
+  }
+
+  @media (max-width: vars.$lg) {
+    --container: 720px;
+  }
+
+  @media (max-width: vars.$md) {
+    --container: 530px;
+  }
+
+  @media (max-width: vars.$sm) {
+    --container: 100%;
+  }
+
+  color: var(--career-black);
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: Roobert, sans-serif;
+  font-style: normal;
+  line-height: 1.35;
+  background: var(--career-white);
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + (var(--padding) * 2));
+  margin: 0 auto;
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+}
+
+.section {
+  margin: fn.cmax(60, 120) 0;
+
+  &__title {
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.35;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 12px 24px;
+  color: var(--career-white);
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.35;
+  background: var(--career-red-light);
+  border-radius: 10px;
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}

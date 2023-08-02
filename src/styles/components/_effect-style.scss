@@ -1,0 +1,7 @@
+@mixin light-illumination {
+  box-shadow: 0 0 50px rgba(255, 255, 255, 100%);
+}
+
+@mixin strong-highlight {
+  box-shadow: 0 0 50px rgba(255, 255, 255, 100%);
+}

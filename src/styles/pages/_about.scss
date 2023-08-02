@@ -1,0 +1,19 @@
+//  About Components
+.main.about-page {
+  // Styles
+  @import '../vendor/style';
+
+  // Base
+  @import '../base/reset';
+  @import '../base/grid';
+
+  // Vendor
+  @import '../vendor/select';
+
+  // Components
+  @import '../components/about/base';
+  @import '../components/about/hero';
+  @import '../components/about/history';
+  @import '../components/about/worth';
+  @import '../components/about/info';
+}

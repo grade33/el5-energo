@@ -1,0 +1,30 @@
+include ../components/header
+include ../components/footer
+
+block vars
+  - const title = 'Document'
+  - const lang = 'ru'
+  - const pageName = 'Main'
+  - const scriptName = ''
+
+
+doctype html
+html(lang=lang)
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="./assets/styles/page.css")
+    link(rel="stylesheet", href="./assets/styles/template.css")
+    link(rel="stylesheet", href="./assets/styles/temporary.css")
+    link(rel="stylesheet", href="./assets/styles/promo.css")
+    link(rel="stylesheet", href="./assets/styles/style.css")
+    if scriptName
+      script(defer src=`./assets/scripts/${scriptName}.js` type="module")
+    title #{title}
+  body
+    div(class="app")
+      +header
+      .main(class=pageName)
+        block content
+      +footer

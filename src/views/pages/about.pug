@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'Home';
+  - const pageName = 'about-page';
+
+block content
+  include ../components/about/hero
+  include ../components/about/history
+  include ../components/about/worth
+  include ../components/about/info
+
+  +hero
+  +history
+  +worth
+  +info

@@ -1,0 +1,128 @@
+@use '../utils/variables' as vars;
+
+@mixin h1-mobile {
+  font-weight: 700;
+  font-size: 70px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin h2-mobile {
+  font-weight: 400;
+  font-size: 45px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin h3-mobile {
+  font-weight: 700;
+  font-size: 30px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin h4-mobile {
+  font-weight: 400;
+  font-size: 30px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin h5-mobile {
+  font-weight: 700;
+  font-size: 20px;
+  font-family: Circe, sans-serif;
+  line-height: 1.14;
+  letter-spacing: 0;
+}
+@mixin h6-mobile {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin t1-mobile {
+  font-weight: 400;
+  font-size: 15px;
+  font-family: Circe, sans-serif;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+@mixin t2-mobile {
+  font-weight: 400;
+  font-size: 15px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin t3-mobile {
+  font-weight: 400;
+  font-size: 1.14;
+  font-family: Circe, sans-serif;
+  line-height: 1.14;
+  letter-spacing: 0;
+}
+@mixin t4-mobile {
+  font-weight: 400;
+  font-size: 6px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin h1 {
+  font-weight: 700;
+  font-size: 70px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin h2 {
+  font-weight: 400;
+  font-size: 60px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin h3 {
+  font-weight: 400;
+  font-size: 40px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin h4 {
+  font-weight: 700;
+  font-size: 40px;
+  font-family: Circe, sans-serif;
+  line-height: 1.14;
+  letter-spacing: 0;
+}
+@mixin t1 {
+  font-weight: 400;
+  font-size: 25px;
+  font-family: Circe, sans-serif;
+  line-height: 1.65;
+  letter-spacing: 0;
+}
+@mixin t2 {
+  font-weight: 700;
+  font-size: 30px;
+  font-family: Circe, sans-serif;
+  line-height: 1.47;
+  letter-spacing: 0;
+}
+@mixin t3 {
+  font-weight: 400;
+  font-size: 20px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}
+@mixin t4 {
+  font-weight: 400;
+  font-size: 12px;
+  font-family: Circe, sans-serif;
+  line-height: 1.33;
+  letter-spacing: 0;
+}

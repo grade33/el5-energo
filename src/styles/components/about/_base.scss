@@ -1,0 +1,84 @@
+@use '../../utils/mixins' as mix;
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as fn;
+
+& {
+  // Colors
+  --about-white: #fff;
+  --about-black: #0e141a;
+  --about-pink: #d3135a;
+
+  // Container
+  --container: 1240px;
+  --padding: 15px;
+
+  @media (max-width: vars.$xxl) {
+    --container: 1140px;
+  }
+
+  @media (max-width: vars.$xl) {
+    --container: 950px;
+  }
+
+  @media (max-width: vars.$lg) {
+    --container: 720px;
+  }
+
+  @media (max-width: vars.$md) {
+    --container: 530px;
+  }
+
+  @media (max-width: vars.$sm) {
+    --container: 100%;
+  }
+
+  color: var(--about-black);
+  font-weight: 400;
+  font-size: 0.9rem;
+  font-family: Roobert, sans-serif;
+  font-style: normal;
+  line-height: 1.2;
+  background: var(--about-white);
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + (var(--padding) * 2));
+  margin: 0 auto;
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1.18;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  padding: 18px 44px;
+  color: var(--about-pink);
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.2;
+  border: 1px solid var(--about-pink);
+  border-radius: 87px;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus-visible,
+  &:active {
+    color: var(--about-white);
+    background: var(--about-pink);
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+  }
+}

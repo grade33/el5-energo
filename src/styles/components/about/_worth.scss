@@ -1,0 +1,59 @@
+@use '../../utils/mixins' as mix;
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as fn;
+
+.worth {
+  &__container {
+    padding-top: fn.cmin(40, 90);
+    padding-bottom: fn.cmin(40, 90);
+    border-top: 1px solid #c2cddd;
+  }
+
+  &__item-order {
+    @media (max-width: vars.$md) {
+      order: 3;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 88px;
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmin(24, 56);
+    max-width: 389px;
+  }
+
+  &__wind {
+    position: relative;
+
+    @media (max-width: vars.$md) {
+      display: none;
+    }
+
+    &_1 {
+      top: -65px;
+      left: -160px;
+
+      @media (max-width: vars.$lg) {
+        top: -35px;
+      }
+    }
+
+    &_2 {
+      bottom: -65px;
+      left: -127px;
+
+      @media (max-width: vars.$lg) {
+        bottom: -35px;
+      }
+    }
+  }
+}

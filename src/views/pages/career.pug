@@ -1,0 +1,25 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'Карьера';
+  - const pageName = 'career-page';
+
+block content
+  include ../components/career/hero
+  include ../components/career/desc
+  include ../components/career/benefits
+  include ../components/career/offer
+  include ../components/career/internship
+  include ../components/career/mentoring
+  include ../components/career/dynasties
+  include ../components/career/inclusion
+
+  +hero
+  +desc
+  +benefits
+  +offer
+  +internship
+  +mentoring
+  +dynasties
+  +inclusion
+

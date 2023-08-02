@@ -1,0 +1,18 @@
+//  About Components
+.main.promo-main-page {
+  // Styles
+  @import '../../vendor/style';
+
+  // Base
+  @import '../../base/reset';
+  @import '../../base/grid';
+
+  // Vendor
+  @import '../../vendor/select';
+
+  // Components
+  @import '../../components/promo/base';
+  @import '../../components/promo/main/hero';
+  @import '../../components/promo/main/about';
+  @import '../../components/promo/main/chapters';
+}

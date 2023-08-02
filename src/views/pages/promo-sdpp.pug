@@ -1,0 +1,25 @@
+extends ../layouts/main
+
+block vars
+  - const title = 'SDPP ';
+  - const pageName = 'promo-sdpp-page';
+  - const scriptName = 'promo-sdpp';
+
+block content
+  include ../partials/promo/sticky-nav
+  include ../components/promo/sdpp/hero
+  include ../components/promo/quiz
+  include ../components/promo/sdpp/turbine
+
+  +sticky-nav('sdpp')
+  +hero
+  +quiz({question: 'Что вращает турбину?', list: 
+    [
+      {option: 'Пар', isCorrect: true },
+      {option: 'Высокая температура', isCorrect: false },
+      {option: 'Вода', isCorrect: false },
+    ]})
+  #hidden-content
+    +turbine
+
+

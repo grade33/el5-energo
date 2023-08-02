@@ -1,0 +1,47 @@
+mixin hero
+  section.hero
+    picture.hero__bg
+      source(media="(max-width: 991.98px)" srcset="@/assets/img/promo/sdpp/steam-boiler-mobile.svg")
+      img(src="@/assets/img/promo/sdpp/steam-boiler.svg" alt="") 
+    button.hero__btn.hero__btn_water.js-modal-btn-water(type="button") Вода
+    button.hero__btn.hero__btn_gas.js-modal-btn-gas(type="button") Газ
+    .hero__modal.hero__modal_info.js-modal-info
+      .hero__modal-content
+        span Аббревиатура ГРЭС расшифровывается как государственная районная электическая станция. Главным источником для получения электричества на ГРЭС может быть твердое топливо, природный газ или мазут. Для производства электроэнергии на ГРЭС ЭЛ5-Энерго используется природный газ как наиболее чистый источник углеводородного топлива и вода как носитель тепловой энергии в системе котел – паровая турбина.
+        img.hero__info-img(src="@/assets/img/promo/sdpp/modal-info.jpg" alt="")
+    .hero__modal.hero__modal_wcc.js-modal-wcc
+      button.hero__modal-close.js-modal-close(type="button") 
+        svg
+          use(xlink:href="./assets/sprite.svg#promo--close")
+      .hero__modal-content
+        span Наши ГРЭС работают на природном газе. В результате отказа от угля и мазута в качестве топлива выбросы загрязняющих веществ в атмосферу уменьшились на 92%!
+        img.hero__info-img(src="@/assets/img/promo/sdpp/modal-wcc.jpg" alt="")
+    .hero__modal.hero__modal_sdpp.js-modal-sdpp
+      button.hero__modal-close.js-modal-close(type="button") 
+        svg
+          use(xlink:href="./assets/sprite.svg#promo--close")
+      .hero__modal-content
+        span 
+          |Природный газ нагревает в котле воду, преобразовывая ее в пар, который вращает турбину. То есть вода также необходима для работы ГРЭС. При этом ее качество должно быть очень высоким, чтобы сократить солеотложение на деталях оборудования и гарантировать его надежную и долговременную работу. Вода также необходима для охлаждения конденсатора турбины, чтобы получить максимально возможный 
+          br
+          |КПД (коэффициент полезного действия)
+        img.hero__info-img(src="@/assets/img/promo/sdpp/modal-sdpp.jpg" alt="")
+
+    .hero__title-block.hero__title-block_boiler
+      h2.hero__title Паровой котёл
+    span.hero__turbine-text.hero__turbine-text_1 Лопатка
+    span.hero__turbine-text.hero__turbine-text_2 Ротор
+    span.hero__turbine-text.hero__turbine-text_3 КорпусD
+    .hero__mobile
+      span.hero__turbine-desc
+        |В топке котла сжигается природный газ. 
+        br
+        |Благодаря ему вода нагревается и превращается в пар. Затем этот пар поступит на турбину, чтобы вращать ее.
+      .hero__turbine-bg-block
+        img.hero__turbine-bg(src="@/assets/img/promo/sdpp/turbine-mobile.svg" alt="")
+        span.hero__turbine-text.hero__turbine-text_mobile.hero__turbine-text_1 Лопатка
+        span.hero__turbine-text.hero__turbine-text_mobile.hero__turbine-text_2 Ротор
+        span.hero__turbine-text.hero__turbine-text_mobile.hero__turbine-text_3 Корпус
+      .hero__title-block.hero__title-block_turbine
+        h2.hero__title Турбина
+

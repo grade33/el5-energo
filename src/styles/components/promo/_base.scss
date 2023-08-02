@@ -1,0 +1,76 @@
+@use '../../utils/mixins' as mix;
+@use '../../utils/variables' as vars;
+@use '../../utils/functions' as fn;
+@use '../font-style' as font;
+
+& {
+  // Colors
+  --ligt-green: #8ed760;
+  --ligt-blue: #4da4ff;
+  --green: #007117;
+  --red: #d2233c;
+  --black: #000;
+  --white: #fff;
+  --gray: #999;
+  --ligt-gray: #efefef;
+
+  // Container
+  --container: 1240px;
+  --padding: 15px;
+
+  @media (max-width: vars.$xxl) {
+    --container: 1140px;
+  }
+
+  @media (max-width: vars.$xl) {
+    --container: 950px;
+  }
+
+  @media (max-width: vars.$lg) {
+    --container: 720px;
+  }
+
+  @media (max-width: vars.$md) {
+    --container: 530px;
+  }
+
+  @media (max-width: vars.$sm) {
+    --container: 100%;
+  }
+
+  position: relative;
+  color: var(--black);
+  background: var(--white);
+  background: var(--ligt-gray, #efefef);
+
+  @include font.t3;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(var(--container) + (var(--padding) * 2));
+  margin: 0 auto;
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+}
+
+.link {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  color: var(--red, #d2233c);
+  @include font.t3;
+
+  @media (max-width: vars.$md) {
+    @include font.t2-mobile;
+  }
+
+  svg {
+    width: 6px;
+    height: 12px;
+  }
+}
+
+a {
+  color: inherit;
+}
