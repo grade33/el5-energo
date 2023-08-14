@@ -145,13 +145,20 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 67%;
     margin: 0 auto;
-    margin-top: 63px;
-    padding: 23px;
+    margin-top: fn.cmin(32, 63);
+    padding: fn.cmin(14, 23);
     color: var(--red, #d2233c);
     text-align: center;
     border: 1px solid var(--red, #d2233c);
     border-radius: 60px;
+
+    @media (max-width: vars.$lg) {
+      width: 100%;
+    }
+    @media (max-width: vars.$md) {
+      width: 100%;
+      @include font.t2-mobile;
+    }
   }
 }

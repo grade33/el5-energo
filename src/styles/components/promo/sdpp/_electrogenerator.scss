@@ -1,0 +1,67 @@
+@use '../../../utils/mixins' as mix;
+@use '../../../utils/variables' as vars;
+@use '../../../utils/functions' as fn;
+@use '../../font-style' as font;
+
+.electrogenerator {
+  padding: 95px 0;
+  background: var(--white, #fff);
+  @media (max-width: vars.$lg) {
+    padding-top: fn.cmin(40,60);
+    padding-bottom: fn.cmin(15,30);
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    gap: 70px;
+    @media (max-width: vars.$lg) {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+
+  &__icon {
+    &-block {
+      margin-left: fn.overhang(var(--container));
+      @media (min-width: vars.$min-lg) {
+        margin-top: -39.5%;
+        margin-bottom: -14.4%;
+        @media (max-width: vars.$xl) {
+          margin-top: -20%;
+        }
+      }
+      @media (max-width: vars.$lg) {
+        margin-top: -20%; 
+      }
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @media (min-width: vars.$min-lg) {
+      max-width: 505px;
+      margin-left: auto;
+    }
+  }
+
+  &__title {
+    @media (max-width: vars.$lg) {
+      position: absolute;
+      top: fn.cmin(20,40);
+      right: 0;
+    }
+    @media (max-width: vars.$md) {
+      @include font.h5-mobile;
+    }
+  }
+
+  &__desc {
+      @include font.t3;
+      @media (max-width: vars.$md) {
+      @include font.t2-mobile;
+    }
+  }
+}
