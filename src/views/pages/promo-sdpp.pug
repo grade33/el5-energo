@@ -7,19 +7,19 @@ block vars
 
 block content
   include ../partials/promo/sticky-nav
-  include ../components/promo/sdpp/hero
+  include ../partials/promo/sticky-link
   include ../components/promo/quiz
+  include ../components/promo/sdpp/hero
   include ../components/promo/sdpp/turbine
   include ../components/promo/sdpp/electrogenerator
   include ../components/promo/sdpp/transformer
   include ../components/promo/sdpp/scheme
-  include ../partials/promo/sticky-link
 
   
 
   +sticky-nav('sdpp')
   +hero
-  +quiz({question: 'Что вращает турбину?', list: 
+  +quiz({question: 'Что вращает турбину?', answer: 'Турбину вращает пар, который образовался в паровом котле.', list: 
     [
       {option: 'Пар', isCorrect: true },
       {option: 'Высокая температура', isCorrect: false },

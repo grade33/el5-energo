@@ -10,7 +10,9 @@ module.exports = {
   mode: process.env.NODE_ENV,
   devtool: isDev ? 'source-map' : false,
   entry: {
+    'promo-main': path.resolve(__dirname, 'src/scripts/promo-main.js'),
     'promo-sdpp': path.resolve(__dirname, 'src/scripts/promo-sdpp.js'),
+    'promo-wcc': path.resolve(__dirname, 'src/scripts/promo-wcc.js'),
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

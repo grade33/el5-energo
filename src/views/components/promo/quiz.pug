@@ -11,7 +11,7 @@ mixin quiz(data)
               strong.quiz__option=item.option
               .quiz__option-selected
                 span.quiz__result=item.isCorrect ? 'Верно' : 'Неверно'
-                span.quiz__answer Турбину вращает пар, который образовался в паровом котле.
+                span.quiz__answer=data.answer
       button#open-hidden-content.quiz__more(type="button") Посмотреть устройство турбины
 
 

@@ -1,8 +1,26 @@
 extends ../layouts/main
 
 block vars
-  - const title = 'WCC';
+  - const title = 'WCC ';
   - const pageName = 'promo-wcc-page';
+  - const scriptName = 'promo-wcc';
 
 block content
+  include ../partials/promo/sticky-nav
+  include ../partials/promo/sticky-link
+  include ../components/promo/quiz
+  include ../components/promo/wcc/hero
+
+  
+
+  +sticky-nav('wcc')
+  +hero
+  +quiz({question: 'Почему у ротора три лопасти?', answer: 'Турбину вращает пар, который образовался в паровом котле.', list: 
+    [
+      {option: 'Так красивее', isCorrect: false },
+      {option: 'Таков стандарт', isCorrect: true },
+      {option: 'Число три счастливое', isCorrect: false },
+    ]})
+  #hidden-content
+    +sticky-link('wcc')
 

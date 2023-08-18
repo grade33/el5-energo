@@ -1,0 +1,25 @@
+//  About Components
+.main.promo-wcc-page {
+  // Styles
+  @import '../../vendor/style';
+
+  // Base
+  @import '../../base/reset';
+  @import '../../base/grid';
+
+  // Vendor
+  @import '../../vendor/select';
+
+  // Libs
+  @import 'swiper/swiper-bundle';
+
+  // Partials
+  @import '../../partials/promo/sticky-nav';
+  
+  @import '../../partials/promo/sticky-link';
+
+  // Components
+  @import '../../components/promo/base';
+  @import '../../components/promo/quiz';
+  @import '../../components/promo/wcc/hero';
+ }
