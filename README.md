@@ -1,2 +1,2 @@
-# Name - https://grade33.github.io/el5-energo-about-page
+# El5-energo - https://grade33.github.io/el5-energo
 
