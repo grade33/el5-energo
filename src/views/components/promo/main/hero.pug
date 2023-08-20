@@ -1,3 +1,35 @@
 mixin hero 
-  section.hero
-    .container.hero__container
+  section.hero 
+    .hero__kitchen-block
+      img.hero__kitchen.hero__kitchen_dark(src="@/assets/img/promo/main/kitchen-dark.svg" alt="")
+      img.hero__kitchen.hero__kitchen_light(src="@/assets/img/promo/main/kitchen.svg" alt="")
+    button.hero__btn.hero__btn_phone(type="button" data-promo-btn="phone")
+      img.hero__icon(src="@/assets/img/promo/main/phone.svg" alt="")
+    button.hero__btn.hero__btn_kettle(type="button" data-promo-btn="kettle")
+      img.hero__icon(src="@/assets/img/promo/main/kettle.svg" alt="")
+    button.hero__btn.hero__btn_fridge(type="button" data-promo-btn="fridge")
+      img.hero__icon(src="@/assets/img/promo/main/fridge.svg" alt="")
+    .hero__modal(data-promo-modal="phone")
+      .container 
+        button.hero__modal-close(type="button")
+          svg.hero__modal-close-icon
+            use(xlink:href="./assets/sprite.svg#promo--close")
+        span Первый мобильный телефон весил около килограмма, а разряжался буквально за полчаса разговора. Современные смартфоны очень легкие, могут держать зарядку несколько дней и часто намного мощнее, чем компьютеры. Но и те, и другие не могли бы работать без электричества.
+    .hero__modal(data-promo-modal="kettle")
+      .container 
+        button.hero__modal-close(type="button")
+          svg.hero__modal-close-icon
+            use(xlink:href="./assets/sprite.svg#promo--close")
+        span В среднем на кухне каждый день работают 5-6 электроприборов. Некоторые, такие как холодильник, круглосуточно!
+    .hero__modal(data-promo-modal="fridge")
+      .container 
+        button.hero__modal-close(type="button")
+          svg.hero__modal-close-icon
+            use(xlink:href="./assets/sprite.svg#promo--close")
+        span В среднем на кухне каждый день работают 5-6 электроприборов. Некоторые, такие как холодильник, круглосуточно!
+    .hero__modal(data-promo-modal="end")
+      .container 
+        button.hero__modal-close(type="button")
+          svg.hero__modal-close-icon
+            use(xlink:href="./assets/sprite.svg#promo--close")
+        span Электричество, поступающие в наши дома, вырабатывается на электростанциях. Топливом для них может служить энергия ветра, солнца, воды, атома, а также природный газ и другие виды топлива. Чтобы оказаться у нас на кухне электричеству приходится пройти большое «расстояние».

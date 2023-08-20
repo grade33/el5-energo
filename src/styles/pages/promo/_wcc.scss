@@ -12,6 +12,7 @@
 
   // Libs
   @import 'swiper/swiper-bundle';
+  @import 'aos/dist/aos';
 
   // Partials
   @import '../../partials/promo/sticky-nav';
@@ -22,4 +23,7 @@
   @import '../../components/promo/base';
   @import '../../components/promo/quiz';
   @import '../../components/promo/wcc/hero';
+  @import '../../components/promo/wcc/wind';
+  @import '../../components/promo/wcc/gondola';
+  @import '../../components/promo/wcc/about';
  }

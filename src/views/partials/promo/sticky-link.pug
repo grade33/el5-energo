@@ -1,11 +1,13 @@
 mixin sticky-link(type)
   if type === 'sdpp'
-    a.sticky-link.sticky-link_sdpp(href="./promo-wcc.html") 
+    a.sticky-link.sticky-link_desktop.sticky-link_sdpp(href="./promo-wcc.html") 
       span Узнать, как работает ВЭС
       svg.sticky-link__icon
         use(xlink:href="./assets/sprite.svg#promo--long-back-arrow")
+    a.sticky-link.sticky-link_mobile.sticky-link_sdpp(href="./promo-wcc.html") Узнать, как работает ВЭС
   else if type === 'wcc'
-    a.sticky-link.sticky-link_wcc(href="./promo-sdpp.html") 
+    a.sticky-link.sticky-link_desktop.sticky-link_wcc(href="./promo-sdpp.html") 
       span Узнать, как работает ГРЭС
       svg.sticky-link__icon
         use(xlink:href="./assets/sprite.svg#promo--long-back-arrow")
+    a.sticky-link.sticky-link_mobile.sticky-link_wcc(href="./promo-sdpp.html") Узнать, как работает ГРЭС

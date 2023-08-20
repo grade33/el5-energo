@@ -26,11 +26,20 @@
   }
 
   &__modal {
+    @include font.t3;
+
     position: absolute;
     top: 19%;
     z-index: 3;
     max-width: 86.15%;
-    @include font.t3;
+    transition:
+      opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
+
+    &:not(&_open) {
+      visibility: hidden;
+      opacity: 0;
+    }
 
     @media (max-width: vars.$md) {
       @include font.t2-mobile;

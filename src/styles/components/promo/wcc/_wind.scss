@@ -1,0 +1,131 @@
+@use '../../../utils/mixins' as mix;
+@use '../../../utils/variables' as vars;
+@use '../../../utils/functions' as fn;
+@use '../../font-style' as font;
+
+.wind {
+  position: relative;
+  z-index: 1;
+  margin-top: -25.92%;
+
+  @include font.t3;
+
+  @media (max-width: vars.$lg) {
+    margin-top: -38.46%;
+  }
+  @media (max-width: vars.$md) {
+    @include font.t2-mobile;
+  }
+
+  &__bg {
+    &,
+    &-img {
+      width: 100%;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 36%;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: fn.cmax(80, 173);
+    align-items: flex-start;
+
+    @media (max-width: vars.$xl) {
+      top: 30%;
+    }
+    @media (max-width: vars.$lg) {
+      top: unset;
+      bottom: 30px;
+      gap: 0;
+    }
+  }
+
+  &__window {
+    position: relative;
+    max-width: 665px;
+    padding: 52px 44px;
+    background: var(--white, #fff);
+
+    @media (max-width: vars.$lg) {
+      order: 3;
+    }
+
+    &::before {
+      position: absolute;
+      z-index: 3;
+      margin: -7px 7px 7px -7px;
+      border: 1px solid #525252;
+      content: '';
+      inset: 0;
+    }
+  }
+
+  &__btn {
+    padding: 15px 66px;
+    color: var(--red, #d2233c);
+    background: var(--white, #fff);
+    border: 1px solid var(--red, #d2233c);
+    border-radius: 30px;
+
+    @media (min-width: vars.$min-lg) {
+      margin-left: 98px;
+    }
+
+    @media (max-width: vars.$lg) {
+      margin-bottom: 44px;
+    }
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 15;
+    padding: 20px;
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 712px;
+    transition:
+      opacity 0.3s ease-in-out,
+      visibility 0.3s ease-in-out;
+
+    &:not(&_open) {
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    @media (min-width: vars.$min-lg) {
+      position: absolute;
+      top: 60%;
+      left: 0%;
+    }
+
+    @media (max-width: vars.$lg) {
+      margin-bottom: 67px;
+    }
+
+    &-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 252px;
+      padding: 55px 62px 62px 55px;
+
+      @media (max-width: vars.$md) {
+        min-height: 247px;
+        padding: 44px;
+      }
+    }
+  }
+}

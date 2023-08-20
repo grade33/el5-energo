@@ -1,0 +1,57 @@
+mixin gondola
+  section.gondola
+    picture.gondola__bg.gondola__img
+      source(media="(max-width: 1439.98px)" srcset="@/assets/img/promo/wcc/gondola/gondola-bg-mobile.svg")
+      img(src="@/assets/img/promo/wcc/gondola/gondola-bg.svg" alt="")
+    picture.gondola__tablet.gondola__tablet_1.gondola__img(data-aos="fade-up" data-aos-delay="1000")
+      source(media="(max-width: 1439.98px)" srcset="@/assets/img/promo/wcc/gondola/tablet-1-mobile.svg")
+      img(src="@/assets/img/promo/wcc/gondola/tablet-1.svg" alt="")
+    picture.gondola__tablet.gondola__tablet_2.gondola__img(data-aos="fade-up" data-aos-delay="1500")
+      source(media="(max-width: 1439.98px)" srcset="@/assets/img/promo/wcc/gondola/tablet-2-mobile.svg")
+      img(src="@/assets/img/promo/wcc/gondola/tablet-2.svg" alt="")
+    picture.gondola__tablet.gondola__tablet_3.gondola__img(data-aos="fade-up" data-aos-delay="2000")
+      source(media="(max-width: 1439.98px)" srcset="@/assets/img/promo/wcc/gondola/tablet-3-mobile.svg")
+      img(src="@/assets/img/promo/wcc/gondola/tablet-3.svg" alt="")
+    picture.gondola__tablet.gondola__tablet_4.gondola__img(data-aos="fade-up" data-aos-delay="2500")
+      source(media="(max-width: 1439.98px)" srcset="@/assets/img/promo/wcc/gondola/tablet-4-mobile.svg")
+      img(src="@/assets/img/promo/wcc/gondola/tablet-4.svg" alt="")
+    picture.gondola__tablet.gondola__tablet_5.gondola__img(data-aos="fade-up" data-aos-delay="3000")
+      source(media="(max-width: 1439.98px)" srcset="@/assets/img/promo/wcc/gondola/tablet-5-mobile.svg")
+      img(src="@/assets/img/promo/wcc/gondola/tablet-5.svg" alt="")
+    .container.gondola__container
+      .swiper.slider.gondola__slider 
+        ul.swiper-wrapper 
+          li.swiper-slide 
+            .gondola__slider-slide
+              span
+                |В гондоле находится оборудование, которое преобразует вращательное движение ротора в электрическую энергию. 
+                br
+                |1.   Низкоскоростной вал передает энергию вращения ротора в гондолу. Вал соединен в редуктором.
+          li.swiper-slide
+            .gondola__slider-slide
+              span 2. Реудктор - сложный передаточный механизм, который повышает скорость вращение примерно в 100 раз! После чего энергия вращения передается на высокоскоростной вал.
+          li.swiper-slide
+            .gondola__slider-slide
+              span 
+                |3. Высокоскоростной вал соединен с электрогенератором. 
+                br
+                |4. Электрогенератор преобразует кинетическую энергию в электрическую.
+          li.swiper-slide
+            .gondola__slider-slide
+              span
+                |Далее электрическая энергия поступает в трансформатор. 
+                br
+                |5. Трансформатор преобразует переменное напряжение до нужных характеристик.
+          li.swiper-slide
+            .gondola__slider-slide
+              span После этого выработанная энергия поступает в сеть. 
+        .swiper-pagination
+        button.swiper-button-prev(type="button")
+          svg.about__slider-btn-icon
+            use(xlink:href="./assets/sprite.svg#promo--chevron-right")
+        button.swiper-button-next(type="button")
+          svg.about__slider-btn-icon
+            use(xlink:href="./assets/sprite.svg#promo--chevron-right")
+      h2.gondola__title Гондола
+    
+

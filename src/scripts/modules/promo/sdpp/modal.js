@@ -16,17 +16,15 @@ export function initModal() {
 
   // функция для скрытия всех модальных окон
   function closeAllModals() {
-    modals.forEach((mod) => {
-      const modal = mod;
-      modal.style.display = 'none';
+    modals.forEach((modal) => {
+      modal.classList.remove('hero__modal_open');
     });
   }
 
   // функция для открытия определенного модального окна
-  function openModal(mod) {
-    const modal = mod;
+  function openModal(modal) {
     closeAllModals();
-    modal.style.display = null;
+    modal.classList.add('hero__modal_open');
   }
 
   // обработчики событий для кнопок открытия попапов

@@ -7,12 +7,12 @@ mixin quiz(data)
       ul.quiz__list
         each item in data.list
           li.quiz__item
-            button.quiz__btn(type="button" data-correct=`${item.isCorrect}`)
+            button#open-hidden-content.quiz__btn(type="button" data-correct=`${item.isCorrect}`)
               strong.quiz__option=item.option
               .quiz__option-selected
                 span.quiz__result=item.isCorrect ? 'Верно' : 'Неверно'
                 span.quiz__answer=data.answer
-      button#open-hidden-content.quiz__more(type="button") Посмотреть устройство турбины
+      a.quiz__more(href="#hidden-content") Посмотреть устройство турбины
 
 
 

@@ -6,9 +6,13 @@ block vars
   - const scriptName = 'promo-main';
 
 block content
+  include ../components/promo/main/hero
+  include ../components/promo/main/setting
   include ../components/promo/main/about
   include ../components/promo/main/chapters
 
+  +hero
+  +setting
   +about
   +chapters
 

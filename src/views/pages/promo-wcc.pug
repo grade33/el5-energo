@@ -7,14 +7,17 @@ block vars
 
 block content
   include ../partials/promo/sticky-nav
-  include ../partials/promo/sticky-link
   include ../components/promo/quiz
   include ../components/promo/wcc/hero
+  include ../components/promo/wcc/wind
+  include ../components/promo/wcc/gondola
+  include ../components/promo/wcc/about
 
   
 
   +sticky-nav('wcc')
   +hero
+  +wind
   +quiz({question: 'Почему у ротора три лопасти?', answer: 'Турбину вращает пар, который образовался в паровом котле.', list: 
     [
       {option: 'Так красивее', isCorrect: false },
@@ -22,5 +25,6 @@ block content
       {option: 'Число три счастливое', isCorrect: false },
     ]})
   #hidden-content
-    +sticky-link('wcc')
+    +gondola
+    +about
 

@@ -4,27 +4,49 @@
 @use '../../components/font-style' as font;
 
 .sticky-link {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  justify-content: center;
-  padding: 32px;
-  color: var(--white, #fff);
-  background: var(--ligt-green, #8ed760);
+  @media (min-width: vars.$min-md) {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    color: var(--white, #fff);
+    background: var(--ligt-green, #8ed760);
 
-  @include font.t3;
+    @include font.t3;
+
+    &_wcc {
+      background: var(--ligt-blue, #4da4ff);
+    }
+
+    &__icon {
+      width: 85px;
+      height: 11px;
+      transform: rotate(180deg);
+    }
+  }
 
   @media (max-width: vars.$md) {
-    display: none;
+    display: block;
+    margin: 50px var(--padding) 0;
+    padding: 24px;
+    color: var(--red, #d2233c);
+    text-align: center;
+    background: #fff;
+    border: 1px solid var(--red, #d2233c);
+    border-radius: 50px;
+    @include font.h5-mobile;
   }
 
-  &_wcc {
-    background: var(--ligt-blue, #4da4ff);
+  &_desktop {
+    @media (max-width: vars.$md) {
+      display: none;
+    }
   }
 
-  &__icon {
-    width: 85px;
-    height: 11px;
-    transform: rotate(180deg);
+  &_mobile {
+    @media (min-width: vars.$min-md) {
+      display: none;
+    }
   }
 }

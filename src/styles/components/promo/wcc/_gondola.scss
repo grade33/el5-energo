@@ -1,0 +1,86 @@
+@use '../../../utils/mixins' as mix;
+@use '../../../utils/variables' as vars;
+@use '../../../utils/functions' as fn;
+@use '../../font-style' as font;
+
+.gondola {
+  position: relative;
+
+  &__container {
+    position: absolute;
+    top: 9%;
+    right: 0;
+    left: 0;
+    z-index: 7;
+    display: flex;
+    flex-direction: column;
+    gap: 107px;
+
+    @media (max-width: vars.$xxl) {
+      top: unset;
+      bottom: 0;
+      gap: 27px;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+    max-width: 540px;
+    margin: 0;
+    @media (max-width: vars.$xxl) {
+      max-width: 100%;
+
+      .swiper-pagination {
+        display: none;
+      }
+    }
+
+    @media (max-width: vars.$md) {
+      @include font.t4-mobile;
+    }
+
+    &-slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 250px;
+      padding: 42px 55px 48px;
+
+      @media (max-width: vars.$xxl) {
+        min-height: 136px;
+        padding: 7px 43px 10px;
+      }
+
+      @media (max-width: vars.$md) {
+        min-height: 52px;
+      }
+    }
+  }
+
+  &__title {
+    @include font.h4;
+
+    @media (max-width: vars.$xxl) {
+      margin: 0 fn.overhang(var(--container));
+      padding: 29px calc(-1 * fn.overhang(var(--container)));
+      background: var(--white, #fff);
+    }
+    @media (max-width: vars.$md) {
+      @include font.h3-mobile;
+    }
+  }
+
+  &__img {
+    &,
+    img {
+      width: 100%;
+    }
+  }
+
+  &__tablet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+}

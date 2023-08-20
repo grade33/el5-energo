@@ -1,0 +1,91 @@
+@use '../../../utils/mixins' as mix;
+@use '../../../utils/variables' as vars;
+@use '../../../utils/functions' as fn;
+@use '../../font-style' as font;
+
+.setting {
+  position: relative;
+  margin-top: -22.92%;
+  @media (max-width: vars.$lg) {
+    margin-top: -21.54%;
+  }
+
+  &__container {
+    @media (min-width: vars.$min-lg) {
+      position: absolute;
+      inset: 0;
+    }
+  }
+
+  &__bg {
+    width: 100%;
+    @media (max-width: vars.$lg) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    &-block {
+      display: flex;
+      margin: 0 fn.overhang(var(--container));
+    }
+
+    width: 100%;
+
+    @media (min-width: vars.$min-lg) {
+      display: none;
+    }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+
+    @media (min-width: vars.$min-lg) {
+      position: absolute;
+      max-width: fn.cmax(430, 470);
+    }
+
+    @media (max-width: vars.$lg) {
+      margin-bottom: 15px;
+    }
+
+    &_1 {
+      @media (min-width: vars.$min-lg) {
+        top: 15%;
+        left: 0;
+      }
+    }
+
+    &_2 {
+      @media (min-width: vars.$min-lg) {
+        top: 54%;
+        right: 0;
+      }
+    }
+
+    &_3 {
+      @media (min-width: vars.$min-lg) {
+        bottom: 4%;
+        left: 0;
+      }
+    }
+  }
+
+  &__num {
+    @include font.h1;
+
+    @media (max-width: vars.$md) {
+      @include font.h1-mobile;
+    }
+  }
+
+  &__desc {
+    @include font.t3;
+
+    @media (max-width: vars.$md) {
+      @include font.t2-mobile;
+    }
+  }
+}

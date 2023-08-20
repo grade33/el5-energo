@@ -1,0 +1,31 @@
+include ../../../partials/promo/sticky-link
+
+mixin about
+  section.about
+    .container.about__container
+      .swiper.about__slider.slider
+        ul.swiper-wrapper
+          li.swiper-slide
+            .about__slider-slider
+              span Ветроэлектрические установки объединяются в единую сеть. Она называется ветряная электростанция или ВЭС.
+          li.swiper-slide
+            .about__slider-slider
+              span Скорость ветра возрастает с высотой. Поэтому ветропарки часто строят на возвышенностях.
+          li.swiper-slide
+            .about__slider-slider
+              span На Кольской ВЭС работают 57 ветроэлектрических установок, на Азовской ВЭС – 26.
+          li.swiper-slide
+            .about__slider-slider
+              span Ветрогенерация считается экологически чистой. Например, Азовская ВЭС способна вырабатывать порядка 320 ГВт*ч в год, избегая при этом выброса около 260 000 тонн углекислого газа в атмосферу.
+        .swiper-pagination
+        button.swiper-button-prev(type="button")
+          svg.about__slider-btn-icon
+            use(xlink:href="./assets/sprite.svg#promo--chevron-right")
+        button.swiper-button-next(type="button")
+          svg.about__slider-btn-icon
+            use(xlink:href="./assets/sprite.svg#promo--chevron-right")
+      .about__icon-block
+        img.about__icon-1(src="@/assets/img/promo/wcc/about-icon.svg" alt="")
+        img.about__icon-2(src="@/assets/img/promo/wcc/about-icon.svg" alt="")
+
+    +sticky-link('wcc')

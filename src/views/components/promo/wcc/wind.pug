@@ -1,0 +1,29 @@
+mixin wind 
+  section.wind
+    picture.wind__bg 
+      source(media="(max-width: 991.98px)" srcset="@/assets/img/promo/wcc/wind-bg-mobile.svg")
+      img.wind__bg-img(src="@/assets/img/promo/wcc/wind-bg.svg" alt="")
+    .wind__container.container 
+      .wind__slider.swiper.slider
+        button.wind__btn-close(type="button")
+          svg.wind__btn-close-icon
+            use(xlink:href="./assets/sprite.svg#promo--close")
+        ul.swiper-wrapper
+          li.swiper-slide 
+            .wind__slider-slide 
+              span Ветер дует на всех планетах, где есть атмосфера. Самый ветреный материк на Земле – это Антарктида. Там ветра дуют постоянно, достигая огромной скорости! Но ВЭС там не строят, потому что эти территории не заселены, и температура воздуха опускается до -70 °C.
+          li.swiper-slide 
+            .wind__slider-slide 
+              span Энергию ветра люди использовали столетия назад. Например, на ней работали всем известные ветряные мельницы и ходили парусные лодки.
+          li.swiper-slide 
+            .wind__slider-slide 
+              span Сегодня около 80 стран мира используют чистую и возобновляемую энергию ветра для получения электричества.
+        .swiper-pagination
+        button.swiper-button-prev(type="button")
+          svg.about__slider-btn-icon
+            use(xlink:href="./assets/sprite.svg#promo--chevron-right")
+        button.swiper-button-next(type="button")
+          svg.about__slider-btn-icon
+            use(xlink:href="./assets/sprite.svg#promo--chevron-right")
+      .wind__window Ветер – это источник энергии, он вращает ротор. Таким образом энергия ветра преобразуется во вращательное движение.
+      button.wind__btn(type="button") Ветер 

@@ -1,3 +1,5 @@
+include ../../../partials/promo/sticky-link
+
 mixin scheme
   section.scheme
     .container
@@ -40,4 +42,4 @@ mixin scheme
                     img(src="@/assets/img/promo/sdpp/scheme/scheme-5.svg", alt="")
                   .scheme__name Вэс
             .swiper-pagination
-          .scheme__btn-more Узнать, как работает ВЭС
+    +sticky-link('sdpp')
