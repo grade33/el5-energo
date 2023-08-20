@@ -5,9 +5,13 @@
 
 .setting {
   position: relative;
-  margin-top: -22.92%;
+  margin-top: -20.2%;
   @media (max-width: vars.$lg) {
-    margin-top: -21.54%;
+    margin-top: -22.2%;
+  }
+
+  @media (max-width: vars.$sm) {
+    margin-top: -15%;
   }
 
   &__container {
