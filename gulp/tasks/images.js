@@ -8,7 +8,7 @@ exports.images = function images() {
   return src(path.src.images)
     .pipe(plugins.newer(path.build.images))
     .pipe(plugins.if(isProd, plugins.newer(path.build.images)))
-    .pipe(plugins.if(isProd, imagemin()))
+    // .pipe(plugins.if(isProd, imagemin()))
     .pipe(dest(path.build.images))
     .pipe(plugins.browsersync.stream());
 };

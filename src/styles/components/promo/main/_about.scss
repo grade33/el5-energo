@@ -6,9 +6,19 @@
 .about {
   position: relative;
   z-index: 1;
-  padding: fn.cmin(50, 95) 0;
+  padding-top: fn.cmin(52,102);
+  overflow: hidden;
 
-  &__img {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 34px;
+    @media (max-width: vars.$md) {
+      margin-bottom: 78px;
+    }
+  }
+
+  &__bg {
     position: absolute;
     top: 0;
     left: 0;
@@ -39,30 +49,10 @@
     }
   }
 
-  &__windmill {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    width: 47%;
-    max-height: 65%;
-    object-position: top;
-
-    @media (max-width: vars.$md) {
-      width: 67.6%;
-    }
-  }
-
-  &__container {
-    display: flex;
-    flex-direction: column;
-    gap: fn.cmin(25, 40);
-    height: 100vh;
-    max-height: 987px;
-  }
-
   &__title {
     @include font.h4;
+
+    margin-bottom: fn.cmin(25, 39);
 
     @media (max-width: vars.$md) {
       @include font.h3-mobile;
@@ -77,6 +67,7 @@
       flex-direction: column;
       gap: 44px;
       align-items: flex-start;
+      padding-top: 0;
     }
 
     &-title {
@@ -92,6 +83,7 @@
     display: flex;
     gap: fn.cmin(24, 85);
     align-items: flex-start;
+    padding-top: 20px;
 
     @media (min-width: vars.$min-xl) {
       align-self: flex-end;
@@ -121,6 +113,14 @@
       @media (max-width: vars.$md) {
         @include font.h6-mobile;
       }
+    }
+  }
+
+  &__windmill {
+    width: 46.62%;
+
+    @media (max-width: vars.$md) {
+      width: 67.6%;
     }
   }
 }

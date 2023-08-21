@@ -1,41 +1,40 @@
 mixin chapters 
   section.chapters
-    .container.chapters__container
-      ul.chapters__list 
-        li.chapters__item
-          picture.chapters__item-bg
-            source(media="(max-width: 1199.98px)" srcset="@/assets/img/promo/main/chapters/sdpp-mobile.jpg")
-            img(src="@/assets/img/promo/main/chapters/sdpp.jpg", alt="")
-          a.chapters__link(href="./promo-sdpp.html") 
-          .chapters__content
-            h3.chapters__title Постоянно работают три тепловые станции
-            .chapters__text-block 
-              svg.chapters__icon.chapters__icon_sdpp
-                use(xlink:href="./assets/sprite.svg#promo--sdpp")
-              .chapters__info
-                ul.chapters__places
-                  li.chapters__places-item Конаковская ГРЭС
-                  li.chapters__places-item Среднеуральская ГРЭС
-                  li.chapters__places-item Невинномысская ГРЭС
-                a.chapters__more.link(href="./promo-sdpp.html") 
-                  | Узнать, как работает ГРЭС
-                  svg
-                    use(xlink:href="./assets/sprite.svg#promo--chevron-right")
-        li.chapters__item
-          picture.chapters__item-bg
-            source(media="(max-width: 1199.98px)" srcset="@/assets/img/promo/main/chapters/wpp-mobile.jpg")
-            img(src="@/assets/img/promo/main/chapters/wpp.jpg", alt="")
-          a.chapters__link(href="./promo-wcc.html") 
-          .chapters__content
-            h3.chapters__title Зеленую энергию круглосуточно вырабатывают
-            .chapters__text-block 
-              svg.chapters__icon.chapters__icon_wpp
-                use(xlink:href="./assets/sprite.svg#promo--wpp")
-              .chapters__info
-                ul.chapters__places
-                  li.chapters__places-item Кольская ВЭС
-                  li.chapters__places-item Азовская ВЭС
-                a.chapters__more.link(href="./promo-wcc.html") 
-                  | Узнать, как работает ВЭС
-                  svg
-                    use(xlink:href="./assets/sprite.svg#promo--chevron-right")
+    ul.chapters__list 
+      li.chapters__item
+        picture.chapters__item-bg
+          source(media="(max-width: 1199.98px)" srcset="@/assets/img/promo/main/chapters/sdpp-mobile.jpg")
+          img(src="@/assets/img/promo/main/chapters/sdpp.jpg", alt="")
+        a.chapters__link(href="./promo-sdpp.html") 
+        .chapters__content
+          h3.chapters__title Постоянно работают три тепловые станции
+          .chapters__text-block 
+            svg.chapters__icon.chapters__icon_sdpp
+              use(xlink:href="./assets/sprite.svg#promo--sdpp")
+            .chapters__info
+              ul.chapters__places
+                li.chapters__places-item Конаковская ГРЭС
+                li.chapters__places-item Среднеуральская ГРЭС
+                li.chapters__places-item Невинномысская ГРЭС
+              a.chapters__more.link(href="./promo-sdpp.html") 
+                | Узнать, как работает ГРЭС
+                svg
+                  use(xlink:href="./assets/sprite.svg#promo--chevron-right")
+      li.chapters__item
+        picture.chapters__item-bg
+          source(media="(max-width: 1199.98px)" srcset="@/assets/img/promo/main/chapters/wpp-mobile.jpg")
+          img(src="@/assets/img/promo/main/chapters/wpp.jpg", alt="")
+        a.chapters__link(href="./promo-wcc.html") 
+        .chapters__content
+          h3.chapters__title Зеленую энергию круглосуточно вырабатывают
+          .chapters__text-block 
+            svg.chapters__icon.chapters__icon_wpp
+              use(xlink:href="./assets/sprite.svg#promo--wpp")
+            .chapters__info
+              ul.chapters__places
+                li.chapters__places-item Кольская ВЭС
+                li.chapters__places-item Азовская ВЭС
+              a.chapters__more.link(href="./promo-wcc.html") 
+                | Узнать, как работает ВЭС
+                svg
+                  use(xlink:href="./assets/sprite.svg#promo--chevron-right")

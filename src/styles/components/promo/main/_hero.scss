@@ -10,6 +10,10 @@
     width: 100%;
     object-position: center;
 
+    &_light {
+      display: none;
+    }
+
     &_hidden {
       min-width: 907px;
       visibility: hidden;
@@ -31,11 +35,9 @@
         .hero__kitchen_dark {
           display: none;
         }
-      }
 
-      &:not(&_light) {
         .hero__kitchen_light {
-          display: none;
+          display: inline-block;
         }
       }
     }
@@ -100,6 +102,8 @@
     width: 100%;
     max-width: 596px;
     transform: translate(-50%, -50%);
+    visibility: hidden;
+    opacity: 0;
     transition:
       opacity 0.3s ease-in-out,
       visibility 0.3s ease-in-out;
@@ -117,16 +121,16 @@
         content: '';
         inset: 0;
       }
-      
+
       @media (max-width: vars.$md) {
         padding: 28px 20px;
         @include font.t2-mobile;
       }
     }
 
-    &:not(&_open) {
-      visibility: hidden;
-      opacity: 0;
+    &_open {
+      visibility: visible;
+      opacity: 1;
     }
 
     &-close {

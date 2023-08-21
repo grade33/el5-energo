@@ -96,13 +96,15 @@
   &__slider {
     width: 100%;
     max-width: 712px;
+    visibility: hidden;
+    opacity: 0;
     transition:
       opacity 0.3s ease-in-out,
       visibility 0.3s ease-in-out;
 
-    &:not(&_open) {
-      visibility: hidden;
-      opacity: 0;
+    &_open {
+      visibility: visible;
+      opacity: 1;
     }
 
     @media (min-width: vars.$min-lg) {

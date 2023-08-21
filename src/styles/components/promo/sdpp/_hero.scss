@@ -32,13 +32,15 @@
     top: 19%;
     z-index: 3;
     max-width: 86.15%;
+    visibility: hidden;
+    opacity: 0;
     transition:
       opacity 0.3s ease-in-out,
       visibility 0.3s ease-in-out;
 
-    &:not(&_open) {
-      visibility: hidden;
-      opacity: 0;
+    &_open {
+      visibility: visible;
+      opacity: 1;
     }
 
     @media (max-width: vars.$md) {
@@ -188,14 +190,15 @@
   }
 
   &__title {
+    @include font.h4;
+
+    @media (max-width: vars.$md) {
+      @include font.h3-mobile;
+    }
+
     &-block {
       display: flex;
       background: var(--white, #fff);
-      @include font.h4;
-
-      @media (max-width: vars.$md) {
-        @include font.h3-mobile;
-      }
 
       @media (min-width: vars.$min-lg) {
         position: absolute;
@@ -225,7 +228,7 @@
         align-items: flex-end;
         min-height: 215px;
         margin-top: -120px;
-        padding-bottom: 20px;
+        padding-bottom: fn.cmin(26, 30);
 
         &_boiler {
           margin-bottom: 38px;
@@ -233,6 +236,10 @@
 
         &_turbine {
           justify-content: flex-end;
+          margin-top: -240px;
+          @media (max-width: vars.$sm) {
+            margin-top: -200px;
+          }
         }
       }
     }
@@ -301,6 +308,13 @@
   }
 
   &__turbine-desc {
+    @media (min-width: vars.$min-lg) {
+      position: absolute;
+      bottom: 22%;
+      left: 5%;
+      max-width: 433px;
+    }
+
     display: block;
     @include font.t3;
 

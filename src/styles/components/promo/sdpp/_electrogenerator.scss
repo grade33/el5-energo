@@ -7,8 +7,8 @@
   padding: 95px 0;
   background: var(--white, #fff);
   @media (max-width: vars.$lg) {
-    padding-top: fn.cmin(40,60);
-    padding-bottom: fn.cmin(15,30);
+    padding-top: fn.cmin(40, 60);
+    padding-bottom: fn.cmin(15, 30);
   }
 
   &__container {
@@ -23,6 +23,7 @@
 
   &__icon {
     &-block {
+      position: relative;
       margin-left: fn.overhang(var(--container));
       @media (min-width: vars.$min-lg) {
         margin-top: -39.5%;
@@ -32,8 +33,25 @@
         }
       }
       @media (max-width: vars.$lg) {
-        margin-top: -20%; 
+        margin-top: -20%;
       }
+    }
+  }
+
+  &__tablet {
+    position: absolute;
+    top: 10%;
+    left: 21%;
+    padding: 18px 28px;
+    background: #fff;
+    @include font.t3;
+
+    @media (max-width: vars.$lg) {
+      top: -4%;
+      left: 4%;
+    }
+    @media (max-width: vars.$md) {
+      @include font.t3-mobile;
     }
   }
 
@@ -50,7 +68,7 @@
   &__title {
     @media (max-width: vars.$lg) {
       position: absolute;
-      top: fn.cmin(20,40);
+      top: fn.cmin(20, 40);
       right: 0;
     }
     @media (max-width: vars.$md) {
@@ -59,8 +77,8 @@
   }
 
   &__desc {
-      @include font.t3;
-      @media (max-width: vars.$md) {
+    @include font.t3;
+    @media (max-width: vars.$md) {
       @include font.t2-mobile;
     }
   }
