@@ -58,8 +58,17 @@
 
   &__link {
     position: absolute;
+    background: transparent;
+    border: 1px solid transparent;
+    transition:
+      background-color 0.3s ease-in-out,
+      border-color 0.3s ease-in-out;
     inset: 0;
-    z-index: -1;
+
+    &:hover {
+      background: rgba(#fff, 0.3); 
+      border-color: var(--red, #d2233c);
+    }
   }
 
   &__content {

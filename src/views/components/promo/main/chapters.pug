@@ -1,7 +1,7 @@
 mixin chapters 
   section.chapters
     ul.chapters__list 
-      li.chapters__item
+      li.chapters__item(data-aos="flip-left")
         picture.chapters__item-bg
           source(media="(max-width: 1199.98px)" srcset="@/assets/img/promo/main/chapters/sdpp-mobile.jpg")
           img(src="@/assets/img/promo/main/chapters/sdpp.jpg", alt="")
@@ -20,7 +20,7 @@ mixin chapters
                 | Узнать, как работает ГРЭС
                 svg
                   use(xlink:href="./assets/sprite.svg#promo--chevron-right")
-      li.chapters__item
+      li.chapters__item(data-aos="flip-right")
         picture.chapters__item-bg
           source(media="(max-width: 1199.98px)" srcset="@/assets/img/promo/main/chapters/wpp-mobile.jpg")
           img(src="@/assets/img/promo/main/chapters/wpp.jpg", alt="")

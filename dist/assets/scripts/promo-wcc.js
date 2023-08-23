@@ -97,13 +97,16 @@ function initQuiz() {
 }
 ;// CONCATENATED MODULE: ./src/scripts/modules/promo/openHiddenСontent.js
 function openHiddenContent() {
+  var footer = document.querySelector('footer.GlobalFooterOi');
   var btnCol = document.querySelectorAll('#open-hidden-content');
   var content = document.querySelector('#hidden-content');
   if (!(btnCol && content)) return;
   content.style.display = 'none';
+  footer.style.display = 'none';
   btnCol.forEach(function (btn) {
     btn.addEventListener('click', function () {
       content.style.display = null;
+      footer.style.display = null;
     });
   });
 }
@@ -9090,9 +9093,8 @@ function windInfoOpenClose() {
 
 
 
-aos_default().init({
-  duration: 1000
-});
+document.documentElement.style.scrollBehavior = 'smooth';
+aos_default().init();
 initQuiz();
 openHiddenContent();
 initSwipers();

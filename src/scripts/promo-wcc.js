@@ -4,9 +4,8 @@ import { openHiddenContent } from './modules/promo/openHiddenСontent';
 import { initSwipers } from './modules/promo/wcc/slider';
 import { windInfoOpenClose } from './modules/promo/wcc/windInfo';
 
-AOS.init({
-  duration: 1000,  
-});
+document.documentElement.style.scrollBehavior = 'smooth';
+AOS.init();
 
 initQuiz();
 openHiddenContent();

@@ -4,15 +4,15 @@ mixin quiz(data)
       .quiz__text-block
         h2.quiz__question=data.question
         span.quiz__text Выберете правильный ответ 
-      ul.quiz__list
+      ul.quiz__list(data-aos="fade-up")
         each item in data.list
           li.quiz__item
-            button#open-hidden-content.quiz__btn(type="button" data-correct=`${item.isCorrect}`)
+            button#open-hidden-content.quiz__btn.hover(type="button" data-correct=`${item.isCorrect}`)
               strong.quiz__option=item.option
               .quiz__option-selected
                 span.quiz__result=item.isCorrect ? 'Верно' : 'Неверно'
                 span.quiz__answer=data.answer
-      a.quiz__more(href="#hidden-content") Посмотреть устройство турбины
+      a.quiz__more.hover(href="#hidden-content")=data.btn
 
 
 

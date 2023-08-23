@@ -91,6 +91,9 @@
     @media (max-width: vars.$xl) {
       flex-wrap: wrap;
     }
+    @media (max-width: vars.$md) {
+      flex-direction: column;
+    }
   }
 
   &__item {

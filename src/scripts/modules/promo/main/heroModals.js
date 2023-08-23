@@ -1,9 +1,14 @@
 export function heroModalsOpenClose() {
+  const hiddenContent = document.querySelector('#hidden-content');
+  const footer = document.querySelector('footer.GlobalFooterOi');
   const bgBlock = document.querySelector('.hero__kitchen-block');
   const btnCol = document.querySelectorAll('[data-promo-btn]');
   const modalCol = document.querySelectorAll('[data-promo-modal]');
   const endModal = document.querySelector('[data-promo-modal="end"]');
   const closeBtnCol = document.querySelectorAll('.hero__modal-close');
+
+  hiddenContent.style.display = 'none';
+  footer.style.display = 'none';
 
   function close(modal) {
     const currentData = modal.dataset.promoModal;
@@ -19,6 +24,8 @@ export function heroModalsOpenClose() {
     if (everyClosed) {
       bgBlock.classList.add('hero__kitchen-block_light');
       endModal.classList.add('hero__modal_open');
+      hiddenContent.style.display = null;
+      footer.style.display = null;
     }
   }
 

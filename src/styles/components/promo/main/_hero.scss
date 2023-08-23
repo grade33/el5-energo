@@ -56,23 +56,23 @@
     }
 
     &_opened {
-      filter: drop-shadow(0 0 50px #fff);
+      filter: drop-shadow(0 0 20px #fff);
     }
 
     &_phone {
-      top: 35.9%;
+      top: 36.1%;
       left: 37.5%;
       width: 4%;
     }
 
     &_kettle {
-      top: 26.8%;
-      left: 39.4%;
-      width: 5.2%;
+      top: 26.7%;
+      left: 39.3%;
+      width: 5.3%;
     }
 
     &_fridge {
-      top: 18%;
+      top: 17.8%;
       left: 57.9%;
       width: 19.2%;
     }
@@ -123,7 +123,7 @@
       }
 
       @media (max-width: vars.$md) {
-        padding: 28px 20px;
+        padding: 32px 20px;
         @include font.t2-mobile;
       }
     }
@@ -140,7 +140,7 @@
       padding-top: 29px;
       padding-right: 29px;
       @media (max-width: vars.$md) {
-        padding: 10px;
+        padding: 7px;
       }
 
       &-icon {

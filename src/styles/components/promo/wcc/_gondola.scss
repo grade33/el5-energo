@@ -16,7 +16,7 @@
     flex-direction: column;
     gap: 107px;
 
-    @media (max-width: vars.$xxl) {
+    @media (max-width: vars.$lg) {
       top: unset;
       bottom: 0;
       gap: 27px;
@@ -27,7 +27,7 @@
     width: 100%;
     max-width: 540px;
     margin: 0;
-    @media (max-width: vars.$xxl) {
+    @media (max-width: vars.$lg) {
       max-width: 100%;
 
       .swiper-pagination {
@@ -46,7 +46,7 @@
       min-height: 250px;
       padding: 42px 55px 48px;
 
-      @media (max-width: vars.$xxl) {
+      @media (max-width: vars.$lg) {
         min-height: 136px;
         padding: 7px 43px 10px;
       }
@@ -60,7 +60,7 @@
   &__title {
     @include font.h4;
 
-    @media (max-width: vars.$xxl) {
+    @media (max-width: vars.$lg) {
       margin: 0 fn.overhang(var(--container));
       padding: 29px calc(-1 * fn.overhang(var(--container)));
       background: var(--white, #fff);

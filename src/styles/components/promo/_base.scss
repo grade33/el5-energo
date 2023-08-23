@@ -105,8 +105,10 @@
     &-next {
       width: unset !important;
       height: unset !important;
+      margin-top: unset;
       padding: fn.cmin(5, 10);
       color: unset !important;
+      transform: translateY(-50%);
 
       &::after {
         content: unset;
@@ -165,6 +167,18 @@
         }
       }
     }
+  }
+}
+
+.hover {
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    color: #fff;
+    background: var(--red);
   }
 }
 
