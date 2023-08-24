@@ -31,6 +31,9 @@ export function heroModalsOpenClose() {
 
   btnCol.forEach((btn) => {
     btn.addEventListener('click', () => {
+      btnCol.forEach((btnItem) => {
+        btnItem.style.animation = 'null'; // eslint-disable-line
+      });
       modalCol.forEach((modal) => {
         if (!modal.classList.contains('hero__modal_open')) return;
         close(modal);
@@ -45,6 +48,9 @@ export function heroModalsOpenClose() {
 
   closeBtnCol.forEach((closeBtn) => {
     closeBtn.addEventListener('click', () => {
+      btnCol.forEach((btnItem) => {
+        btnItem.style.animation = null; // eslint-disable-line
+      });
       const modal = closeBtn.closest('[data-promo-modal]');
       close(modal);
     });

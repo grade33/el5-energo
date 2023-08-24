@@ -103,6 +103,10 @@ function heroModalsOpenClose() {
   }
   btnCol.forEach(function (btn) {
     btn.addEventListener('click', function () {
+      btnCol.forEach(function (btnItem) {
+        btnItem.style.animation = 'null'; // eslint-disable-line
+      });
+
       modalCol.forEach(function (modal) {
         if (!modal.classList.contains('hero__modal_open')) return;
         close(modal);
@@ -115,6 +119,10 @@ function heroModalsOpenClose() {
   });
   closeBtnCol.forEach(function (closeBtn) {
     closeBtn.addEventListener('click', function () {
+      btnCol.forEach(function (btnItem) {
+        btnItem.style.animation = null; // eslint-disable-line
+      });
+
       var modal = closeBtn.closest('[data-promo-modal]');
       close(modal);
     });

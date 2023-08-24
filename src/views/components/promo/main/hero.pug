@@ -4,12 +4,13 @@ mixin hero
     .hero__kitchen-block
       img.hero__kitchen.hero__kitchen_dark(src="@/assets/img/promo/main/kitchen-dark.svg" alt="")
       img.hero__kitchen.hero__kitchen_light(src="@/assets/img/promo/main/kitchen.svg" alt="")
-      button.hero__btn.hero__btn_phone(type="button" data-promo-btn="phone")
-        img.hero__icon(src="@/assets/img/promo/main/phone.svg" alt="")
-      button.hero__btn.hero__btn_kettle(type="button" data-promo-btn="kettle")
-        img.hero__icon(src="@/assets/img/promo/main/kettle.svg" alt="")
-      button.hero__btn.hero__btn_fridge(type="button" data-promo-btn="fridge")
-        img.hero__icon(src="@/assets/img/promo/main/fridge.svg" alt="")
+      .hero__btn-block
+        button.hero__btn.hero__btn_phone(type="button" data-promo-btn="phone")
+          img.hero__icon(src="@/assets/img/promo/main/phone.svg" alt="")
+        button.hero__btn.hero__btn_kettle(type="button" data-promo-btn="kettle")
+          img.hero__icon(src="@/assets/img/promo/main/kettle.svg" alt="")
+        button.hero__btn.hero__btn_fridge(type="button" data-promo-btn="fridge")
+          img.hero__icon(src="@/assets/img/promo/main/fridge.svg" alt="")
     .hero__modal(data-promo-modal="phone")
       .hero__modal-content
         button.hero__modal-close(type="button")

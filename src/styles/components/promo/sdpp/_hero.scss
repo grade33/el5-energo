@@ -83,12 +83,15 @@
       }
 
       @media (max-width: vars.$lg) {
-        top: 18.5%;
+        top: 10%;
         transform: translate(-50%, -50%);
 
         img {
           display: none;
         }
+      }
+      @media (max-width: vars.$md) {
+        top: 9%;
       }
 
       .hero__modal-content {
@@ -111,9 +114,14 @@
       top: 100%;
       left: 50%;
       z-index: 3;
-      transform: translateX(-50%) translateY(-30%) scale(1);
+      transform: translateX(-50%) translateY(-30px) scale(1);
       visibility: visible;
       opacity: 1;
+
+      @media (max-width: vars.$md) {
+        width: 80%;
+        transform: translateX(-50%) scale(1);
+      }
     }
 
     &_wcc {
@@ -274,7 +282,7 @@
     @include font.t3;
 
     position: absolute;
-    z-index: 3;
+    z-index: 7;
     transform: translate(-50%, -50%);
 
     @media (max-width: vars.$md) {
@@ -348,6 +356,7 @@
   &__turbine-bg {
     &-block {
       position: relative;
+      z-index: 3;
     }
 
     width: 100%;
