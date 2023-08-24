@@ -8,6 +8,10 @@
   clip-path: inset(50%) !important;
 }
 
+& {
+  overflow: hidden;
+}
+
 main,
 footer {
   overflow-x: hidden;
@@ -132,4 +136,3 @@ h5,
 h6 {
   margin: 0;
 }
- 

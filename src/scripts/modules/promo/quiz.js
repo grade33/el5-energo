@@ -1,5 +1,6 @@
 export function initQuiz() {
   const quizSectionCol = document.querySelectorAll('.quiz');
+
   quizSectionCol.forEach((quizSection) => {
     const options = quizSection.querySelectorAll('.quiz__btn');
 

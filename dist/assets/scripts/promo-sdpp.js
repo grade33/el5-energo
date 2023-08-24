@@ -154,6 +154,7 @@ function openHiddenContent() {
   var footer = document.querySelector('footer.GlobalFooterOi');
   var btnCol = document.querySelectorAll('#open-hidden-content');
   var content = document.querySelector('#hidden-content');
+  var quizSection = document.querySelector('.quiz');
   if (!(btnCol && content)) return;
   content.style.display = 'none';
   footer.style.display = 'none';
@@ -161,6 +162,12 @@ function openHiddenContent() {
     btn.addEventListener('click', function () {
       content.style.display = null;
       footer.style.display = null;
+      setTimeout(function () {
+        quizSection.scrollIntoView({
+          block: 'end',
+          behavior: 'smooth'
+        });
+      }, 0);
     });
   });
 }

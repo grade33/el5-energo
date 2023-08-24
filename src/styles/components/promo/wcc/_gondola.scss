@@ -21,6 +21,9 @@
       bottom: 0;
       gap: 27px;
     }
+    @media (max-width: vars.$md) {
+      gap: 12px;
+    }
   }
 
   &__slider {
@@ -40,6 +43,16 @@
 
     @media (max-width: vars.$md) {
       @include font.t4-mobile;
+
+      .swiper-button {
+        &-prev {
+          left: 0;
+        }
+
+        &-next {
+          right: 0;
+        }
+      }
     }
 
     &-slide {
@@ -56,6 +69,7 @@
 
       @media (max-width: vars.$md) {
         min-height: 52px;
+        padding: 7px 20px 10px;
       }
     }
   }

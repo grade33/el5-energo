@@ -155,6 +155,10 @@
       opacity 0.3s ease-in-out,
       visibility 0.3s ease-in-out;
 
+    &[data-promo-modal='end'] {
+      top: 75%;
+    }
+
     &-content {
       position: relative;
       margin: 0 var(--padding);

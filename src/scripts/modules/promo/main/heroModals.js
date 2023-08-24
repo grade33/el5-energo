@@ -24,6 +24,18 @@ export function heroModalsOpenClose() {
     if (everyClosed) {
       bgBlock.classList.add('hero__kitchen-block_light');
       endModal.classList.add('hero__modal_open');
+
+      setTimeout(() => {
+        const element = endModal;
+        const elementRect = element.getBoundingClientRect();
+        const absoluteElementTop = elementRect.top + window.pageYOffset;
+        const middle = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
+        window.scrollTo({
+          top: middle,
+          behavior: 'smooth', // плавная прокрутка
+        });
+      }, 0);
+
       hiddenContent.style.display = null;
       footer.style.display = null;
     }
