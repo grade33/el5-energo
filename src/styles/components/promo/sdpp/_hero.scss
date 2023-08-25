@@ -306,7 +306,7 @@
       }
     }
     @media (max-width: vars.$lg) {
-      &:not(&_mobile) {
+      &_desktop {
         display: none;
       }
 

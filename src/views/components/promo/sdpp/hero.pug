@@ -12,14 +12,14 @@ mixin hero
       .hero__modal.hero__modal_inner
         .hero__modal-content.hero__modal-content_2
           span Вода и природный газ используются для производства электроэнергии на ГРЭС «ЭЛ5-Энерго».
-    .hero__modal.hero__modal_wcc.js-modal-wcc
+    .hero__modal.hero__modal_sdpp.js-modal-sdpp
       button.hero__modal-close.js-modal-close(type="button") 
         svg
           use(xlink:href="./assets/sprite.svg#promo--close")
       .hero__modal-content
         span Наши ГРЭС работают на природном газе. В результате отказа от угля и мазута в качестве топлива выбросы загрязняющих веществ в атмосферу уменьшились на 92%!
         img.hero__info-img(src="@/assets/img/promo/sdpp/modal-wcc.jpg" alt="")
-    .hero__modal.hero__modal_sdpp.js-modal-sdpp
+    .hero__modal.hero__modal_wcc.js-modal-wcc
       button.hero__modal-close.js-modal-close(type="button") 
         svg
           use(xlink:href="./assets/sprite.svg#promo--close")
@@ -32,9 +32,9 @@ mixin hero
 
     .hero__title-block.hero__title-block_boiler
       h2.hero__title(data-aos="fade-up") Паровой котёл
-    span.hero__turbine-text.hero__turbine-text_1(data-aos="fade-up") Лопатка
-    span.hero__turbine-text.hero__turbine-text_2(data-aos="fade-up") Корпус
-    span.hero__turbine-text.hero__turbine-text_3(data-aos="fade-up") Ротор
+    span.hero__turbine-text.hero__turbine-text_desktop.hero__turbine-text_1(data-aos="fade-up") Лопатка
+    span.hero__turbine-text.hero__turbine-text_desktop.hero__turbine-text_2(data-aos="fade-up") Корпус
+    span.hero__turbine-text.hero__turbine-text_desktop.hero__turbine-text_3(data-aos="fade-up") Ротор
     span.hero__turbine-desc(data-aos="fade-up") В топке котла сжигается природный газ. Благодаря ему вода нагревается и превращается в пар. Затем этот пар поступит на турбину, чтобы вращать ее.
     .hero__mobile
       .hero__turbine-bg-block

@@ -68,9 +68,18 @@
   }
 
   &__title {
+    @media (min-width: vars.$min-lg) {
+      &_mobile {
+        display: none;
+      }
+    }
     @media (max-width: vars.$lg) {
+      &_desktop {
+        display: none;
+      }
+
       position: absolute;
-      top: fn.cmin(20, 40);
+      top: fn.cmin(20,40);
       right: 0;
     }
     @media (max-width: vars.$md) {

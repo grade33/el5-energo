@@ -78,7 +78,7 @@
       opacity 0.3s ease-in-out,
       visibility 0.3s ease-in-out,
       filter 0.3s ease-in-out;
-    animation: drop-shadow 2s ease-in-out infinite alternate-reverse;
+    animation: drop-shadow .5s ease-in-out infinite alternate-reverse;
 
     @keyframes drop-shadow {
       0% {
@@ -86,7 +86,7 @@
       }
 
       100% {
-        filter: drop-shadow(0 0 20px #fff);
+        filter: drop-shadow(0 0 30px #fff);
       }
     }
 
