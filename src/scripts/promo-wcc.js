@@ -5,6 +5,7 @@ import { initSwipers } from './modules/promo/wcc/slider';
 import { windInfoOpenClose } from './modules/promo/wcc/windInfo';
 
 document.documentElement.style.scrollBehavior = 'smooth';
+
 AOS.init();
 
 initQuiz();
