@@ -97,18 +97,6 @@ function heroModalsOpenClose() {
     if (everyClosed) {
       bgBlock.classList.add('hero__kitchen-block_light');
       endModal.classList.add('hero__modal_open');
-      setTimeout(function () {
-        var element = endModal;
-        var elementRect = element.getBoundingClientRect();
-        var absoluteElementTop = elementRect.top + window.pageYOffset;
-        var middle = absoluteElementTop - window.innerHeight / 2 + elementRect.height / 2;
-        window.scrollTo({
-          top: middle,
-          behavior: 'smooth' // плавная прокрутка
-        });
-      }, 0);
-      hiddenContent.style.display = null;
-      footer.style.display = null;
     }
   }
   btnCol.forEach(function (btn) {
@@ -121,6 +109,20 @@ function heroModalsOpenClose() {
         if (!modal.classList.contains('hero__modal_open')) return;
         close(modal);
       });
+      if (footer.style.display) {
+        setTimeout(function () {
+          var element = endModal;
+          var elementRect = element.getBoundingClientRect();
+          var absoluteElementTop = elementRect.top + window.pageYOffset;
+          var middle = absoluteElementTop - window.innerHeight / 2 + elementRect.height / 2;
+          window.scrollTo({
+            top: middle,
+            behavior: 'smooth' // плавная прокрутка
+          });
+        }, 0);
+        hiddenContent.style.display = null;
+        footer.style.display = null;
+      }
       var currentData = btn.dataset.promoBtn;
       var currentModal = document.querySelector("[data-promo-modal=".concat(currentData, "]"));
       currentModal.classList.add('hero__modal_open');
