@@ -21,23 +21,10 @@ export function heroModalsOpenClose() {
     modal.classList.remove('hero__modal_open');
     currentBtn.classList.add('hero__btn_close');
     const everyClosed = Array.from(btnCol).every((btn) => btn.classList.contains('hero__btn_close'));
+
     if (everyClosed) {
       bgBlock.classList.add('hero__kitchen-block_light');
       endModal.classList.add('hero__modal_open');
-
-      setTimeout(() => {
-        const element = endModal;
-        const elementRect = element.getBoundingClientRect();
-        const absoluteElementTop = elementRect.top + window.pageYOffset;
-        const middle = absoluteElementTop - (window.innerHeight / 2) + (elementRect.height / 2);
-        window.scrollTo({
-          top: middle,
-          behavior: 'smooth', // плавная прокрутка
-        });
-      }, 0);
-
-      hiddenContent.style.display = null;
-      footer.style.display = null;
     }
   }
 
@@ -50,6 +37,21 @@ export function heroModalsOpenClose() {
         if (!modal.classList.contains('hero__modal_open')) return;
         close(modal);
       });
+
+      if (footer.style.display) {
+        setTimeout(() => {
+          const element = endModal;
+          const elementRect = element.getBoundingClientRect();
+          const absoluteElementTop = elementRect.top + window.pageYOffset;
+          const middle = absoluteElementTop - window.innerHeight / 2 + elementRect.height / 2;
+          window.scrollTo({
+            top: middle,
+            behavior: 'smooth', // плавная прокрутка
+          });
+        }, 0);
+        hiddenContent.style.display = null;
+        footer.style.display = null;
+      }
 
       const currentData = btn.dataset.promoBtn;
       const currentModal = document.querySelector(`[data-promo-modal=${currentData}]`);
